@@ -1,0 +1,55 @@
+:root{
+    --dark-col: #212121;
+    --light-col: #fafafa;
+    --light-btn: #757575;
+    --color-light: #f1f5f9;
+    --color-blue: #1a73e8;
+    --shadow-normal: 0 1px 3px 0 rgba(0, 0, 0, 0.1),0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --shadow-medium: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-large: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+.portal-main-wrapper{
+    height: 92vh;
+    width: 100%;
+    background-color: var(--color-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.portal-main-wrapper .portal-sub-wrapper{
+    height: 85vh;
+    width: 90%;
+    display: flex;
+    background-color: var(--light-col);
+    box-shadow: var(--shadow-large);
+}
+.form-wrapper-left{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.form-wrapper-right{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.portal-main-wrapper .button-wrapper{
+    height: 40px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    cursor: pointer;
+    background-color: var(--dark-col);
+}
+.portal-main-wrapper .button-wrapper a{
+    text-decoration: none;
+    color: var(--color-light);
+}
