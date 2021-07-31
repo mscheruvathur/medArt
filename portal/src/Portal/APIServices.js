@@ -1,6 +1,6 @@
 export default class APIService{
     static PortalRegistration(body) {
-        return fetch('http://127.0.0.1:8000/api/hospital/', {
+        return fetch('http://127.0.0.1:8000/api/hpt/', {
             
             'method' : 'POST',
             headers: {

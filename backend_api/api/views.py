@@ -4,6 +4,7 @@ from re import U
 from django.shortcuts import render
 from django.http import HttpResponse, request
 from rest_framework import permissions
+from rest_framework.serializers import SerializerMetaclass
 from .models import User, Hospital
 from rest_framework import viewsets
 from .serializers import UserSerializer, HospitalSerializer,UserSerializerWithToken
@@ -63,6 +64,18 @@ def getUSers(request):
     serializer = UserSerializer(users, many = True)
     return Response(serializer.data)
 
+
+@api_view(['GET'])
+def getHospitals(request):
+    hospitals = Hospital.objects.all()
+    serializer = HospitalSerializer(hospitals, many = True)
+    return Response(serializer.data)
+
+@api_view(['GET'])
+def getHospital(request,pk):
+    hospital = Hospital.objects.get(id = pk)
+    serializer = HospitalSerializer(hospital)
+    return Response(serializer.data)
 
 # class UserViewSet(viewsets.ModelViewSet):
 #     queryset = User.objects.all()
