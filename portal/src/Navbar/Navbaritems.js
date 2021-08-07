@@ -2,6 +2,7 @@ import React from "react";
 import "./Navbaritems.css";
 import "rsuite/dist/styles/rsuite-default.css";
 import { Navbar,Nav,Icon,Dropdown } from 'rsuite';
+import { Link } from "react-router-dom";
 
 function Navbaritems() {
   return (
@@ -13,7 +14,9 @@ function Navbaritems() {
       </Navbar.Header>
       <Navbar.Body>
         <Nav>
+          <Link to="/">
           <Nav.Item icon={<Icon icon="home" />}>Portal</Nav.Item>
+          </Link>
           <Nav.Item>Add Services</Nav.Item>
           <Nav.Item>Edit</Nav.Item>
           
